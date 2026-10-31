@@ -10,7 +10,7 @@ A comprehensive full-stack web application that enables customers to browse car 
 
 ## 🚀 Running it
 
-The app isn't hosted permanently: for the course it ran on IBM Cloud Code Engine and Kubernetes, which were temporary lab environments. The screenshots below come from that deployment, and [Getting Started](#-getting-started) runs the whole stack locally.
+The app isn't hosted permanently: for the course it ran on IBM Cloud Code Engine and Kubernetes (`server/deployment.yaml`) in temporary lab environments. The screenshots below show it running, and [Getting Started](#-getting-started) runs the whole stack locally.
 
 ## 📸 Screenshots
 
