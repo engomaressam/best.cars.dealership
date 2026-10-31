@@ -8,9 +8,9 @@
 
 A comprehensive full-stack web application that enables customers to browse car dealerships across the United States and submit reviews for their experiences. Built with modern technologies and microservices architecture.
 
-## 🚀 Live Demo
+## 🚀 Running it
 
-[View Live Application](#) <!-- Add your deployment URL here -->
+The app isn't hosted permanently: for the course it ran on IBM Cloud Code Engine and Kubernetes, which were temporary lab environments. The screenshots below come from that deployment, and [Getting Started](#-getting-started) runs the whole stack locally.
 
 ## 📸 Screenshots
 
