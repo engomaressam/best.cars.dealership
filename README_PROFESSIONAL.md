@@ -8,11 +8,11 @@
 
 A comprehensive full-stack web application that enables customers to browse car dealerships across the United States and submit reviews for their experiences. Built with modern technologies and microservices architecture.
 
-## 🚀 Live Demo
+## Live Demo
 
 [View Live Application](#) <!-- Add your deployment URL here -->
 
-## 📸 Screenshots
+## Screenshots
 
 <table>
   <tr>
@@ -25,48 +25,48 @@ A comprehensive full-stack web application that enables customers to browse car 
   </tr>
 </table>
 
-## 🎯 Project Overview
+## Project Overview
 
 Best Cars Dealership is a national car dealership with local branches across the United States. This platform allows customers to:
 
-- 🔍 Browse dealerships by location and state
-- ⭐ Read reviews from other customers
-- ✍️ Submit their own reviews (authenticated users)
-- 🚗 View car inventory by make and model
-- 😊 See sentiment analysis of reviews (positive, negative, neutral)
+- Browse dealerships by location and state
+- Read reviews from other customers
+- Submit their own reviews (authenticated users)
+- View car inventory by make and model
+- See sentiment analysis of reviews (positive, negative, neutral)
 
-## ✨ Key Features
+## Key Features
 
 ### User Management
-- ✅ User registration and authentication
-- ✅ Session management with Django authentication system
-- ✅ Secure login/logout functionality
-- ✅ Role-based access control (anonymous vs. authenticated users)
+- User registration and authentication
+- Session management with Django authentication system
+- Secure login/logout functionality
+- Role-based access control (anonymous vs. authenticated users)
 
 ### Dealership Management
-- ✅ View all dealerships nationwide
-- ✅ Filter dealerships by state
-- ✅ View detailed information for each dealership
-- ✅ Dynamic dealer data from MongoDB
+- View all dealerships nationwide
+- Filter dealerships by state
+- View detailed information for each dealership
+- Dynamic dealer data from MongoDB
 
 ### Review System
-- ✅ Browse reviews for any dealership
-- ✅ Submit reviews (authenticated users only)
-- ✅ Include purchase details (car make, model, year)
-- ✅ Automated sentiment analysis on all reviews
-- ✅ Real-time review updates
+- Browse reviews for any dealership
+- Submit reviews (authenticated users only)
+- Include purchase details (car make, model, year)
+- Automated sentiment analysis on all reviews
+- Real-time review updates
 
 ### Car Inventory
-- ✅ Database of car makes and models
-- ✅ Dynamic dropdowns for review submission
-- ✅ Admin interface for inventory management
+- Database of car makes and models
+- Dynamic dropdowns for review submission
+- Admin interface for inventory management
 
 ### Sentiment Analysis
-- ✅ Microservice for analyzing review sentiment
-- ✅ Visual indicators (positive/negative/neutral)
-- ✅ Deployed as independent service
+- Microservice for analyzing review sentiment
+- Visual indicators (positive/negative/neutral)
+- Deployed as independent service
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Frontend
 - **React 18** - Modern UI library
@@ -95,7 +95,7 @@ Best Cars Dealership is a national car dealership with local branches across the
 - **Requests** - HTTP library for API calls
 - **dotenv** - Environment variable management
 
-## 📋 Architecture
+## Architecture
 
 ```
 ┌─────────────────┐
@@ -128,7 +128,7 @@ Best Cars Dealership is a national car dealership with local branches across the
          └──────────────────┘
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Python 3.13+
@@ -212,7 +212,7 @@ python manage.py runserver
 - Admin Panel: http://localhost:8000/admin
 - Backend API: http://localhost:3030
 
-## 📚 API Endpoints
+## API Endpoints
 
 ### Django Endpoints (`/djangoapp/`)
 
@@ -239,16 +239,16 @@ python manage.py runserver
 | GET | `/fetchReviews/dealer/:id` | Get reviews for dealer |
 | POST | `/insert_review` | Insert new review |
 
-## 🎨 Features Walkthrough
+## Features Walkthrough
 
 ### 1. Browse Dealerships
 Navigate to `/dealers` to see all dealerships in a table format. Use the state dropdown to filter by location.
 
 ### 2. View Reviews
 Click "View Reviews" on any dealer to see customer reviews with sentiment indicators:
-- 🟢 **Positive** - Great experience
-- 🔴 **Negative** - Poor experience
-- ⚪ **Neutral** - Mixed or neutral feedback
+- **Positive** - Great experience
+- **Negative** - Poor experience
+- **Neutral** - Mixed or neutral feedback
 
 ### 3. Submit a Review
 1. Log in or register an account
@@ -267,7 +267,7 @@ Access `/admin` to manage:
 - Car makes and models
 - View all data
 
-## 🧪 Testing
+## Testing
 
 ### Run Django Tests
 ```bash
@@ -286,7 +286,7 @@ curl http://localhost:8000/djangoapp/get_dealers/
 curl http://localhost:8000/djangoapp/dealer/15
 ```
 
-## 📦 Docker Deployment
+## Docker Deployment
 
 The application uses Docker for containerization:
 
@@ -302,7 +302,7 @@ docker-compose logs -f
 docker-compose down
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -318,7 +318,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 CSRF_TRUSTED_ORIGINS = ['http://localhost:8000', 'http://127.0.0.1:8000']
 ```
 
-## 📈 Future Enhancements
+## Future Enhancements
 
 - [ ] Deploy to cloud platform (AWS/Azure/Heroku)
 - [ ] Add car inventory search functionality
@@ -331,7 +331,7 @@ CSRF_TRUSTED_ORIGINS = ['http://localhost:8000', 'http://127.0.0.1:8000']
 - [ ] Create dealer dashboard
 - [ ] Implement email notifications
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -341,18 +341,18 @@ Contributions are welcome! Please follow these steps:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Author
+## Author
 
 **Omar Essam**
 - GitHub: [@engomaressam](https://github.com/engomaressam)
 - Email: omaressamrme@gmail.com
 - LinkedIn: [Your LinkedIn Profile](#)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - IBM Full-Stack Developer Capstone Project
 - Django Software Foundation
@@ -361,7 +361,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Bootstrap Team
 - All contributors and reviewers
 
-## 📞 Support
+## Support
 
 For issues, questions, or suggestions:
 - Open an issue on GitHub
@@ -369,6 +369,6 @@ For issues, questions, or suggestions:
 
 ---
 
-⭐ Star this repository if you found it helpful!
+Star this repository if you found it helpful!
 
-**Built with ❤️ by Omar Essam**
+**Built with by Omar Essam**

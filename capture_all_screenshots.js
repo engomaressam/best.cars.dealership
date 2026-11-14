@@ -7,7 +7,7 @@ const path = require('path');
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 (async () => {
-  console.log('🚀 Starting comprehensive screenshot capture...\n');
+  console.log('Starting comprehensive screenshot capture...\n');
 
   // Create screenshots directory if it doesn't exist
   const screenshotsDir = path.join(__dirname, 'screenshots');
@@ -33,14 +33,14 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
     try {
       const filepath = path.join(screenshotsDir, filename);
       await page.screenshot({ path: filepath, fullPage: false });
-      console.log(`✅ Captured: ${filename} - ${description}`);
+      console.log(`Captured: ${filename} - ${description}`);
       successCount++;
-      results.push({ filename, status: '✅', description });
+      results.push({ filename, status: '', description });
       return true;
     } catch (error) {
-      console.error(`❌ Failed: ${filename} - ${error.message}`);
+      console.error(`Failed: ${filename} - ${error.message}`);
       failCount++;
-      results.push({ filename, status: '❌', description });
+      results.push({ filename, status: '', description });
       return false;
     }
   }
@@ -58,7 +58,7 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
   }
 
   try {
-    console.log('📸 Phase 1: Static Pages\n');
+    console.log('Phase 1: Static Pages\n');
 
     // 1. About Us page
     if (await safeGoto('http://localhost:8000/about/')) {
@@ -92,7 +92,7 @@ Quit the server with CTRL-BREAK.
     await delay(1000);
     await captureScreenshot('django_server.png', 'Django development server running');
 
-    console.log('\n📸 Phase 2: Authentication Pages\n');
+    console.log('\nPhase 2: Authentication Pages\n');
 
     // 4. Login page
     if (await safeGoto('http://localhost:8000/login/')) {
@@ -122,7 +122,7 @@ Quit the server with CTRL-BREAK.
     await delay(1000);
     await captureScreenshot('logout.png', 'Logout confirmation alert message');
 
-    console.log('\n📸 Phase 3: Express API Endpoints\n');
+    console.log('\nPhase 3: Express API Endpoints\n');
 
     // 7. Dealer reviews API
     if (await safeGoto('http://localhost:3030/fetchReviews/dealer/29')) {
@@ -144,7 +144,7 @@ Quit the server with CTRL-BREAK.
       await captureScreenshot('kansasDealers.png', 'JSON response filtered by Kansas');
     }
 
-    console.log('\n📸 Phase 4: Admin Panel\n');
+    console.log('\nPhase 4: Admin Panel\n');
 
     // 11. Admin login
     if (await safeGoto('http://localhost:8000/admin/')) {
@@ -231,7 +231,7 @@ Quit the server with CTRL-BREAK.
     await delay(1000);
     await captureScreenshot('sentiment_analyzer.png', 'Sentiment analysis JSON response');
 
-    console.log('\n📸 Phase 5: Dealers Pages\n');
+    console.log('\nPhase 5: Dealers Pages\n');
 
     // 16. Dealers page (not logged in)
     if (await safeGoto('http://localhost:8000/dealers/')) {
@@ -268,7 +268,7 @@ Quit the server with CTRL-BREAK.
     await delay(1000);
     await captureScreenshot('dealersbystate.png', 'Dealers filtered by state search');
 
-    console.log('\n📸 Phase 6: Dealer Details & Reviews\n');
+    console.log('\nPhase 6: Dealer Details & Reviews\n');
 
     // 19. Dealer details with reviews
     if (await safeGoto('http://localhost:8000/dealer/15')) {
@@ -322,14 +322,14 @@ Quit the server with CTRL-BREAK.
           <div style="background:#28a745;width:40px;height:40px;border-radius:50%;margin-bottom:10px;"></div>
           <div class="review"><strong>NEW!</strong> Excellent service! The staff was very professional and helpful.</div>
           <div class="reviewer" style="font-size:18px;text-align:center;color:gray;">John Smith - Toyota Camry 2024</div>
-          <div style="color:#28a745;font-weight:bold;margin-top:10px;">Sentiment: Positive ⭐⭐⭐⭐⭐</div>
+          <div style="color:#28a745;font-weight:bold;margin-top:10px;">Sentiment: Positive </div>
         `;
         container.insertBefore(newReview, container.firstChild);
       });
       await captureScreenshot('added_review.png', 'New review added with sentiment');
     }
 
-    console.log('\n📸 Phase 7: CI/CD & Deployment\n');
+    console.log('\nPhase 7: CI/CD & Deployment\n');
 
     // 22. GitHub Actions - Mock CI/CD success page
     await page.setContent(`
@@ -474,13 +474,13 @@ Quit the server with CTRL-BREAK.
             <div style="padding: 20px;">
               <h1>Grand Auto Sales</h1>
               <div style="background: #d4edda; padding: 15px; margin: 20px 0; border-radius: 5px;">
-                ✅ Your review has been successfully added!
+                Your review has been successfully added!
               </div>
               <div style="border: 2px solid purple; padding: 20px; margin: 10px; border-radius: 10px; background: #e8f5e9;">
                 <div style="background: #28a745; width: 40px; height: 40px; border-radius: 50%;"></div>
                 <p><strong>NEW!</strong> Excellent service! Very satisfied with my purchase.</p>
                 <p style="color: gray;">John Smith - Honda Accord 2024</p>
-                <p style="color: #28a745; font-weight: bold;">Sentiment: Positive ⭐⭐⭐⭐⭐</p>
+                <p style="color: #28a745; font-weight: bold;">Sentiment: Positive </p>
               </div>
             </div>
             <div style="position: fixed; bottom: 10px; left: 10px; background: white; padding: 10px; border: 1px solid #ddd;">
@@ -494,7 +494,7 @@ Quit the server with CTRL-BREAK.
     await captureScreenshot('deployed_add_review.png', 'Deployed app with newly added review');
 
     // Additional screenshot for search cars if needed
-    console.log('\n📸 Bonus: Search Cars Feature\n');
+    console.log('\nBonus: Search Cars Feature\n');
     await page.setContent(`
       <html>
         <head><title>Search Cars - Grand Auto Sales</title></head>
@@ -534,21 +534,21 @@ Quit the server with CTRL-BREAK.
     console.error('Error during screenshot capture:', error);
   } finally {
     console.log('\n' + '='.repeat(60));
-    console.log('📊 SCREENSHOT CAPTURE SUMMARY');
+    console.log('SCREENSHOT CAPTURE SUMMARY');
     console.log('='.repeat(60) + '\n');
     
-    console.log(`✅ Successfully captured: ${successCount} screenshots`);
-    console.log(`❌ Failed: ${failCount} screenshots\n`);
+    console.log(`Successfully captured: ${successCount} screenshots`);
+    console.log(`Failed: ${failCount} screenshots\n`);
     
-    console.log('📁 Screenshots saved to:', screenshotsDir);
-    console.log('\n📋 Results:');
+    console.log('Screenshots saved to:', screenshotsDir);
+    console.log('\nResults:');
     results.forEach((r, i) => {
       console.log(`${i + 1}. ${r.status} ${r.filename} - ${r.description}`);
     });
 
     await browser.close();
-    console.log('\n✨ Screenshot capture complete!');
-    console.log('📌 Please verify all screenshots in the screenshots folder.');
-    console.log('📌 If any are missing, the services might not be running.');
+    console.log('\nScreenshot capture complete!');
+    console.log('Please verify all screenshots in the screenshots folder.');
+    console.log('If any are missing, the services might not be running.');
   }
 })();

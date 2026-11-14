@@ -1,6 +1,6 @@
 # Final Submission Guide - Best Cars Dealership
 
-## 📌 GitHub Repository URLs
+## GitHub Repository URLs
 
 ### Task 1: Public GitHub Repository
 **URL:** https://github.com/engomaressam/best.cars.dealership
@@ -15,7 +15,7 @@ This repository contains all the code for the complete full-stack application in
 
 ---
 
-## 📸 All Screenshots Location
+## All Screenshots Location
 
 **All screenshots are located in:** `screenshots/` folder
 
@@ -65,7 +65,7 @@ This repository contains all the code for the complete full-stack application in
 
 ---
 
-## 🔗 Task 24: Deployment URL
+## Task 24: Deployment URL
 
 **Deployment URL:** `http://localhost:8000` (Local deployment for testing)
 
@@ -78,7 +78,7 @@ For this submission, the local URL demonstrates full functionality.
 
 ---
 
-## 📋 How to Take Required Screenshots
+## How to Take Required Screenshots
 
 ### Prerequisites:
 1. Ensure Django server is running: `python manage.py runserver`
@@ -183,7 +183,7 @@ Use your Kubernetes/deployed URL for these:
 
 ---
 
-## 🎯 Screenshot Quality Requirements
+## Screenshot Quality Requirements
 
 1. **Resolution:** Minimum 1280x720, recommended 1920x1080
 2. **URL Visibility:** Browser address bar must be visible in ALL screenshots
@@ -193,44 +193,44 @@ Use your Kubernetes/deployed URL for these:
 
 ---
 
-## 📊 Submission Summary
+## Submission Summary
 
 ### Total Points: 50
 
 | Task | Points | Screenshot | Status |
 |------|--------|------------|--------|
-| 1 | 1 | GitHub URL | ✅ |
-| 2 | 1 | django_server.png | ⏳ |
-| 3 | 3 | about_us.png | ⏳ |
-| 4 | 2 | contact_us.png | ⏳ |
-| 5 | 2 | login.png | ⏳ |
-| 6 | 2 | logout.png | ⏳ |
-| 7 | 1 | sign-up.png | ⏳ |
-| 8 | 2 | dealer_review.png | ⏳ |
-| 9 | 2 | dealerships.png | ⏳ |
-| 10 | 2 | dealer_details.png | ⏳ |
-| 11 | 2 | kansasDealers.png | ⏳ |
-| 12 | 2 | admin_login.png | ⏳ |
-| 13 | 1 | admin_logout.png | ⏳ |
-| 14 | 2 | cars.png | ⏳ |
-| 15 | 2 | car_models.png | ⏳ |
-| 16 | 2 | sentiment_analyzer.png | ⏳ |
-| 17 | 1 | get_dealers.png | ⏳ |
-| 18 | 2 | get_dealers_loggedin.png | ⏳ |
-| 19 | 2 | dealersbystate.png | ⏳ |
-| 20 | 1 | dealer_id_reviews.png | ⏳ |
-| 21 | 1 | dealership_review_submission.png | ⏳ |
-| 22 | 2 | added_review.png | ⏳ |
-| 23 | 3 | CICD.png | ⏳ |
-| 24 | 1 | Deployment URL | ⏳ |
-| 25 | 2 | deployed_landingpage.png | ⏳ |
-| 26 | 2 | deployed_loggedin.png | ⏳ |
-| 27 | 2 | deployed_dealer_detail.png | ⏳ |
-| 28 | 2 | deployed_add_review.png | ⏳ |
+| 1 | 1 | GitHub URL | |
+| 2 | 1 | django_server.png | |
+| 3 | 3 | about_us.png | |
+| 4 | 2 | contact_us.png | |
+| 5 | 2 | login.png | |
+| 6 | 2 | logout.png | |
+| 7 | 1 | sign-up.png | |
+| 8 | 2 | dealer_review.png | |
+| 9 | 2 | dealerships.png | |
+| 10 | 2 | dealer_details.png | |
+| 11 | 2 | kansasDealers.png | |
+| 12 | 2 | admin_login.png | |
+| 13 | 1 | admin_logout.png | |
+| 14 | 2 | cars.png | |
+| 15 | 2 | car_models.png | |
+| 16 | 2 | sentiment_analyzer.png | |
+| 17 | 1 | get_dealers.png | |
+| 18 | 2 | get_dealers_loggedin.png | |
+| 19 | 2 | dealersbystate.png | |
+| 20 | 1 | dealer_id_reviews.png | |
+| 21 | 1 | dealership_review_submission.png | |
+| 22 | 2 | added_review.png | |
+| 23 | 3 | CICD.png | |
+| 24 | 1 | Deployment URL | |
+| 25 | 2 | deployed_landingpage.png | |
+| 26 | 2 | deployed_loggedin.png | |
+| 27 | 2 | deployed_dealer_detail.png | |
+| 28 | 2 | deployed_add_review.png | |
 
 ---
 
-## 🚀 Quick Start for Screenshots
+## Quick Start for Screenshots
 
 ### Start All Services:
 
@@ -256,7 +256,7 @@ node create_screenshots.js
 
 ---
 
-## 📦 Files to Submit
+## Files to Submit
 
 1. **GitHub URL:** https://github.com/engomaressam/best.cars.dealership
 2. **Screenshots:** All 27 PNG files from `screenshots/` folder
@@ -264,7 +264,7 @@ node create_screenshots.js
 
 ---
 
-## ✅ Pre-Submission Checklist
+## Pre-Submission Checklist
 
 - [ ] All services running (Django, MongoDB, Express)
 - [ ] All 27 screenshots taken
@@ -276,19 +276,19 @@ node create_screenshots.js
 
 ---
 
-## 🎓 Final Notes
+## Final Notes
 
 This capstone project demonstrates:
-- ✅ Full-stack development (Django + React)
-- ✅ Microservices architecture
-- ✅ Docker containerization
-- ✅ Kubernetes deployment
-- ✅ CI/CD with GitHub Actions
-- ✅ RESTful API design
-- ✅ Database management (SQLite + MongoDB)
-- ✅ Sentiment analysis integration
+- Full-stack development (Django + React)
+- Microservices architecture
+- Docker containerization
+- Kubernetes deployment
+- CI/CD with GitHub Actions
+- RESTful API design
+- Database management (SQLite + MongoDB)
+- Sentiment analysis integration
 
-**Good luck with your submission!** 🎉
+**Good luck with your submission!**
 
 ---
 

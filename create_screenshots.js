@@ -17,22 +17,22 @@ const path = require('path');
     fs.mkdirSync(screenshotsDir);
   }
 
-  console.log('📸 Starting screenshot capture for all 27 required tasks...\n');
+  console.log('Starting screenshot capture for all 27 required tasks...\n');
 
   const screenshots = [];
 
   async function captureScreenshot(name, url, description, waitTime = 2000) {
     try {
-      console.log(`📷 Capturing: ${name}`);
+      console.log(`Capturing: ${name}`);
       await page.goto(url, { waitUntil: 'networkidle0', timeout: 15000 });
       await new Promise(resolve => setTimeout(resolve, waitTime));
       const screenshotPath = path.join(screenshotsDir, `${name}.png`);
       await page.screenshot({ path: screenshotPath, fullPage: false });
-      screenshots.push({ name, description, status: '✅' });
-      console.log(`   ✅ Saved: ${name}.png\n`);
+      screenshots.push({ name, description, status: '' });
+      console.log(`   Saved: ${name}.png\n`);
     } catch (error) {
-      screenshots.push({ name, description, status: '❌' });
-      console.error(`   ❌ Error capturing ${name}: ${error.message}\n`);
+      screenshots.push({ name, description, status: '' });
+      console.error(`   Error capturing ${name}: ${error.message}\n`);
     }
   }
 
@@ -115,7 +115,7 @@ const path = require('path');
 
   // Summary
   console.log('\n' + '='.repeat(60));
-  console.log('📊 SCREENSHOT CAPTURE SUMMARY');
+  console.log('SCREENSHOT CAPTURE SUMMARY');
   console.log('='.repeat(60) + '\n');
   
   screenshots.forEach((s, i) => {
@@ -123,9 +123,9 @@ const path = require('path');
     console.log(`   ${s.description}\n`);
   });
 
-  const successCount = screenshots.filter(s => s.status === '✅').length;
-  console.log(`\n✅ Successfully captured: ${successCount}/${screenshots.length} screenshots`);
-  console.log('\n⚠️  MANUAL SCREENSHOTS STILL NEEDED:');
+  const successCount = screenshots.filter(s => s.status === '').length;
+  console.log(`\nSuccessfully captured: ${successCount}/${screenshots.length} screenshots`);
+  console.log('\n MANUAL SCREENSHOTS STILL NEEDED:');
   console.log('   • logout.png - Logout alert after clicking logout');
   console.log('   • admin_logout.png - Admin logout confirmation');
   console.log('   • car_models.png - Car models in admin panel');
@@ -139,5 +139,5 @@ const path = require('path');
   console.log('   • deployed_*.png - 4 deployment screenshots\n');
 
   await browser.close();
-  console.log('✨ Screenshot capture complete!\n');
+  console.log('Screenshot capture complete!\n');
 })();
